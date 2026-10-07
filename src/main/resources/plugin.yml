@@ -42,8 +42,39 @@ permissions:
       jvillage.admin.plugin.import: true
       jvillage.admin.plugin.import.towny: true
       jvillage.admin.plugin.import.factions: true
+      jvillage.admin.village: true
       jvillage.admin.world: true
       jvillage.admin.world.wgcleanup: true
+
+  jvillage.admin.village:
+    description: Allows access to JVillage village admin commands
+    default: op
+    children:
+      jvillage.admin.village.add: true
+      jvillage.admin.village.delete: true
+      jvillage.admin.village.kick: true
+      jvillage.admin.village.setowner: true
+      jvillage.admin.village.unclaim: true
+
+  jvillage.admin.village.add:
+    description: Allows access to JVillage admin village add command
+    default: op
+
+  jvillage.admin.village.delete:
+    description: Allows access to JVillage admin village delete command
+    default: op
+
+  jvillage.admin.village.kick:
+    description: Allows access to JVillage admin village kick command
+    default: op
+
+  jvillage.admin.village.setowner:
+    description: Allows access to JVillage admin village setowner command
+    default: op
+
+  jvillage.admin.village.unclaim:
+    description: Allows access to JVillage admin village unclaim command
+    default: op
 
   jvillage.admin.plugin.import.factions:
     description: Allows access to JVillage admin plugin import factions data
