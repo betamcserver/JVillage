@@ -73,7 +73,7 @@ public class JClaimMap implements ClaimManager {
     }
 
     public List<VClaim> getVillageClaims(Village village) {
-        return this.claimsByVillage.computeIfAbsent(village.getTownUUID(), _ -> new ArrayList<>());
+        return List.copyOf(this.claimsByVillage.computeIfAbsent(village.getTownUUID(), _ -> new ArrayList<>()));
     }
 
     public VClaim getClaimAtChunk(World world, int chunkX, int chunkZ) {
